@@ -4,4 +4,21 @@
 
 Existing Matches
 
+<table style="width:100%">
+    <tr>
+      <th>Notice</th>
+      <th>Record</th>
+      <th>Match Type</th>
+    </tr>
+
+{% for m in matches %}
+<tr>
+    <td style="text-align:center">{{ m.notice }}</td>
+    <td style="text-align:center">{{ m.record }}</td>
+    <td style="text-align:center">{{ m.m_type }}</td>
+  </tr>
+
+{% endfor %}
+</table>
+
 {% endblock %}

@@ -17,4 +17,24 @@ Delete Record
     <input type="submit" value="Delete" />
 </form>
 
+<table style="width:100%">
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last name</th>
+      <th>Province</th>
+      <th>Date of Birth</th>
+    </tr>
+
+{% for r in records %}
+<tr>
+    <td style="text-align:center">{{ r.pk }}</td>
+    <td style="text-align:center">{{ r.first_name }}</td>
+    <td style="text-align:center">{{ r.last_name }}</td>
+    <td style="text-align:center">{{ r.province }}</td>
+    <td style="text-align:center">{{ r.date_of_birth }}</td>
+  </tr>
+
+{% endfor %}
+</table>
 {% endblock %}

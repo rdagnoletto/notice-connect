@@ -21,7 +21,12 @@ class CreateForm(forms.Form):
         required = True
     )
 
-    date_of_birth = forms.DateField(required = True)
+    date_of_birth = forms.DateField(
+        label = "Date of birth (MM/DD/YYYY)",
+        widget=forms.DateInput(format='%m/%d/%Y'),
+        input_formats=('%m/%d/%Y', ),
+        required = True
+    )
 
 class DeleteForm(forms.Form):
     record_id = forms.IntegerField(
