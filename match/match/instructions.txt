@@ -1,0 +1,32 @@
+You have 2 days to complete this task. Use Git for code versioning and delivery. 
+Upon completing a task, send us URL to Git repo. Try to do good documentation and as many commits as you can, 
+so that we can get an idea about your thinking process.- Create a Django project
+- Connect with any SQL database of choice
+- Create a tables named Notice, Record, Match. Those will have following columns.
+
+       Notice	                Record	              Match
+first_name - required	first_name - required	record (F.K. to Record)
+last_name - required	last_name - required	notice (F.K. to Notice)
+alt_first_name	            province	          type (ChoiceField)
+alt_last_name	       date_of_birth (DateField)	
+Province - required		
+date_of_birth (DateField)		
+
+
+- Load Notice table with some dummy data.- Create Django Views for Create and Delete Record.
+- Create Django View for listing matches.
+- When record is created it’s data will be matched against all notices.
+- If matched create Match object, matching algorithm is described below.
+- Related matches needs to be deleted when Notice or Record is deleted.
+Match Algorithm:
+1. Strong Match:
+ - first_name or alt_first_name of notice matches with first_name of record 
+- last_name or alt_last_name of notice matches with last_name of record
+- date_of_birth and province are matching
+
+2. Possible Match
+- first_name, last_name, province are matching
+
+3. Weak Match
+ - Only first_name and last_name are matching
+Bonus: - Write unittests as many as you can. Specifically around the matching algorithm.
