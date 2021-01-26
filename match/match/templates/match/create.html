@@ -2,6 +2,18 @@
 
 {% block content %}
 
-create
+Create New Record
+<form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="fieldWrapper">
+        <p>
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+        </p>
+        </div>
+    {% endfor %}
+    <input type="submit" value="Create" />
+</form>
 
 {% endblock %}
