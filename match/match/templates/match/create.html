@@ -4,6 +4,7 @@
 
 Create New Record
 <form method="post">
+    <!-- Loop through fields to display form -->
     {% csrf_token %}
     {% for field in form %}
         <div class="fieldWrapper">

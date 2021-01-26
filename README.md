@@ -21,3 +21,7 @@ python match/manage.py loaddata match/match/fixtures/notices.json
 
 
 python match/manage.py runserver
+
+Run tests with:
+
+python match/manage.py test match

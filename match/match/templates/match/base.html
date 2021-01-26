@@ -5,15 +5,18 @@
 
     <meta charset="utf-8">
     <p>
+        <!-- Website titles is a link to home page -->
         <a href="{% url 'home' %}"><b> Notice Connect </b></a>
     </p>
     <p>
+        <!-- Whenever messages need to be returned to user such as success or failure of creating or deleting records -->
         {{ message }}
     </p>
 
 </head>
 
 <body>
+     <!-- Where the base template is extended -->
     {% block content %}
     {% endblock %}
 </body>

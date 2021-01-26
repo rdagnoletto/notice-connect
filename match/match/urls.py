@@ -20,6 +20,7 @@ from . import views
 
 app_name='match'
 
+# url routing for different views defined in views.py
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('', views.home, name='home'),

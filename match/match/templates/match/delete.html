@@ -5,6 +5,7 @@
 Delete Record
 
 <form method="post">
+    <!-- Loop through fields to display form -->
     {% csrf_token %}
     {% for field in form %}
         <div class="fieldWrapper">
@@ -14,9 +15,11 @@ Delete Record
         </p>
         </div>
     {% endfor %}
+    <!-- Delete button -->
     <input type="submit" value="Delete" />
 </form>
 
+<!-- Display records with the pk/id of the record with the other data so users can decide which to delete -->
 <table style="width:100%">
     <tr>
       <th>ID</th>

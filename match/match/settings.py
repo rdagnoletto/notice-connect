@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# Added match app in installed app.
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

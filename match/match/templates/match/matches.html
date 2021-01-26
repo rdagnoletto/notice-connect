@@ -4,13 +4,16 @@
 
 Existing Matches
 
+
 <table style="width:100%">
+  <!-- Table header -->
     <tr>
       <th>Notice</th>
       <th>Record</th>
       <th>Match Type</th>
     </tr>
 
+    <!-- Loop through matches and populate rows of table -->
 {% for m in matches %}
 <tr>
     <td style="text-align:center">{{ m.notice }}</td>

@@ -18,6 +18,7 @@ PROVINCES = [
 class Notice(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    # blank = True because these are optional
     alt_first_name = models.CharField(max_length=100,blank=True)
     alt_last_name = models.CharField(max_length=100,blank=True)
 
@@ -48,6 +49,7 @@ class Match(models.Model):
         (POSSIBLE, 'Possible'),
         (STRONG, 'Strong'),
     ]
+    # On delete cascade ensures matches are deleted when corresponded records or notices are deleted.
     record = models.ForeignKey('match.Record', on_delete=models.CASCADE)
     notice = models.ForeignKey('match.Notice', on_delete=models.CASCADE)
 
