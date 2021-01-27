@@ -59,11 +59,11 @@
         "model": "match.notice",
         "pk": 6,
         "fields": {
-            "first_name": "Anthony",
+            "first_name": "Matt",
             "last_name": "Caterini",
             "alt_first_name": "Rob",
             "alt_last_name": "Agnoletto",
-            "province": "ON",
+            "province": "BC",
             "date_of_birth": "1992-06-15"
         }
     },    {
